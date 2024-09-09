@@ -8,7 +8,9 @@ import AgoraRTC from "agora-rtc-react";
 
 import dynamic from "next/dynamic";
 
-const ConferenceRoom = dynamic(() => import("@/components/conference-room"));
+const ConferenceRoom = dynamic(() => import("@/components/conference-room"), {
+  ssr: false,
+});
 
 interface Page {
   searchParams: { uid: string };
